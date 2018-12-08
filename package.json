@@ -4,7 +4,7 @@
     "private": true,
     "description": "{{{project.description}}}",
     "scripts": {
-        "test": "./node_modules/.bin/mocha --opts mocha.opts $(find -name *_test.ts)"
+        "test": "./node_modules/.bin/mocha --opts mocha.opts $(find test -name *_test.ts)"
     },
     "author": "{{{project.author}}}",
     "license": "{{{project.license.name}}}",

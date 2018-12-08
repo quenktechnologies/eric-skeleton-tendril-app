@@ -1,0 +1,45 @@
+{
+
+    "title": "skeleton-tendril",
+    "type": "object",
+    "properties": {
+
+        "project.name": {
+
+            "type": "string",
+            "prompt": "What is this project called?"
+
+        },
+        "project.description": {
+
+            "type": "string",
+            "prompt": "Briefly describe this project"
+
+        },
+        "project.author": {
+
+            "type": "string",
+            "prompt": "Provide the name and or email address of the project author."
+
+        },
+        "project.license.name": {
+
+            "type": "string",
+            "prompt": "What is the license for this project?"
+        },
+        "project.license.text": {
+
+            "type": "string",
+            "prompt": "Enter project license full or summary text."
+
+        },
+        "project.build.directory": {
+
+            "type": "string",
+            "prompt": "Enter the path (relative to project root) the project will be build to."
+
+        }
+
+    }
+
+}
