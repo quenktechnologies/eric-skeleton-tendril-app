@@ -9,7 +9,7 @@
     "author": "{{{project.author}}}",
     "license": "{{{project.license.name}}}",
     "dependencies": {
-        "@quenk/preconditions": "^3.5.0",
+        "@quenk/preconditions": "^4.2.0",
         "@quenk/tendril": "^0.17.1",
         "body-parser": "^1.17.2",
         "dotenv": "^4.0.0",
@@ -20,19 +20,18 @@
         "nunjucks": "^3.0.1"
     },
     "devDependencies": {
-        "@quenk/dagen": "^0.9.4",
+        "@quenk/dagen": "^1.0.0",
         "@quenk/tdc": "^1.0.3",
         "@quenk/must": "^1.0.3",
-        "@types/bcrypt": "^1.0.0",
-        "@types/bcrypt-nodejs": "0.0.30",
+        "@types/bcrypt": "^3.0.0",
         "@types/dotenv": "^4.0.0",
         "@types/express-session": "^1.15.2",
         "@types/mocha": "^2.2.43",
         "@types/node": "^8.0.24",
         "@types/nunjucks": "0.0.32",
-        "mocha": "^3.5.2",
-        "ts-node": "^3.3.0",
-        "typescript": "^2.8.3"
+        "mocha": "^5.2.0",
+        "ts-node": "^7.0.0",
+        "typescript": "^3.2.2"
 
     }
 
