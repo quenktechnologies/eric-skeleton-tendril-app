@@ -39,7 +39,8 @@ PROJECT_BUILD_DIR:=$(HERE)/{{{project.build.directory}}}
 ### Dependency Graph ###
 
 # The whole application gets built to here.
-$(PROJECT_BUILD_DIR): $(shell $(FIND) $(PROJECT_PACKAGES_DIR) -maxdepth 1 -mindepth 1 -type d)
+# Remember to add a dependency here for each of your extra packages.
+$(PROJECT_BUILD_DIR): $(PROJECT_SRC_DIR_FILES) 
 	rm -R $@ || true
 	mkdir -p $@
 	cp -R $(PROJECT_SRC_DIR)/* $@
