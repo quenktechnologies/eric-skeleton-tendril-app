@@ -42,7 +42,7 @@ PROJECT_BUILD_DIR:=$(HERE)/{{{project.build.directory}}}
 # Remember to add a dependency here for each of your extra packages.
 $(PROJECT_BUILD_DIR): $(PROJECT_SRC_DIR_FILES) 
 	mkdir -p $@
-	cp -R $(PROJECT_SRC_DIR)/* $@
+	cp -R -u $(PROJECT_SRC_DIR)/* $@
 	$(TSC) -p $@
 	$(TOUCH) $(PROJECT_BUILD_DIR)
 
