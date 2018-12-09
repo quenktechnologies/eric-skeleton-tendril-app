@@ -31,9 +31,6 @@ PROJECT_SRC_DIR:=$(HERE)/src
 PROJECT_SRC_DIR_FILES:=$(shell $(FIND) $(PROJECT_SRC_DIR) -type f)
 PROJECT_PACKAGES_DIR:=$(HERE)/packages
 
-PROJECT_PACKAGES_DIR_FILES:=$(shell $(FIND) $(PROJECT_PACKAGES_DIR) \
-			    -maxdepth 1 -mindepth 1 -type d)
-
 PROJECT_BUILD_DIR:=$(HERE)/{{{project.build.directory}}}
 
 # Configure the paths for your extra packages here.
@@ -45,6 +42,7 @@ PROJECT_BUILD_DIR:=$(HERE)/{{{project.build.directory}}}
 $(PROJECT_BUILD_DIR): $(PROJECT_SRC_DIR_FILES) 
 	mkdir -p $@
 	cp -R -u $(PROJECT_SRC_DIR)/* $@
+	$(TDC) $(PROJECT_BUILD_DIR)/app
 	$(TSC) -p $@
 	$(TOUCH) $(PROJECT_BUILD_DIR)
 
