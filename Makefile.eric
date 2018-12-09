@@ -36,6 +36,8 @@ PROJECT_PACKAGES_DIR_FILES:=$(shell $(FIND) $(PROJECT_PACKAGES_DIR) \
 
 PROJECT_BUILD_DIR:=$(HERE)/{{{project.build.directory}}}
 
+# Configure the paths for your extra packages here.
+
 ### Dependency Graph ###
 
 # The whole application gets built to here.
@@ -46,7 +48,7 @@ $(PROJECT_BUILD_DIR): $(PROJECT_SRC_DIR_FILES)
 	$(TSC) -p $@
 	$(TOUCH) $(PROJECT_BUILD_DIR)
 
-#Include *.mk files here.
+# Include *.mk files here.
 
 
 # Remove the build application files.
