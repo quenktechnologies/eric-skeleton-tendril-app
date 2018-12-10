@@ -4,8 +4,9 @@
     "private": true,
     "description": "{{{project.description}}}",
     "scripts": {
-        "test": "./node_modules/.bin/mocha --opts mocha.opts $(find test -name *_test.ts)"
-    },
+        "test": "./node_modules/.bin/mocha --opts mocha.opts $(find test -name *_test.ts)",
+       "start": "node -r dotenv/config dest/app/start.js"
+   },
     "author": "{{{project.author}}}",
     "license": "{{{project.license.name}}}",
     "dependencies": {

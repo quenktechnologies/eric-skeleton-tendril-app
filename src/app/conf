@@ -1,0 +1,14 @@
+
+-- [Actor Configuration] --
+
+-- The id and mount point for this module.
+-- Change if you want routes to be served relative to another directory.
+id = "/"
+
+-- [Server Configuration] --
+
+-- Read the port number from the environment
+server.port = ${PORT}
+
+-- Bind to the loopback. You can change this if you like.
+server.host = "0.0.0.0"

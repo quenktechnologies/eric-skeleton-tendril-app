@@ -30,7 +30,6 @@ endef
 PROJECT_SRC_DIR:=$(HERE)/src
 PROJECT_SRC_DIR_FILES:=$(shell $(FIND) $(PROJECT_SRC_DIR) -type f)
 PROJECT_PACKAGES_DIR:=$(HERE)/packages
-
 PROJECT_BUILD_DIR:=$(HERE)/{{{project.build.directory}}}
 
 # Configure the paths for your extra packages here.
