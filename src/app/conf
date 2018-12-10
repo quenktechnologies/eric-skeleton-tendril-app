@@ -12,3 +12,41 @@ server.port = ${PORT}
 
 -- Bind to the loopback. You can change this if you like.
 server.host = "0.0.0.0"
+
+-- Default middleware configuration.
+-- Remember that middleware must be declared available before actual use.
+app.middleware.available = {
+
+  public = {
+
+    provider = express#static
+    
+    options = ["${__dirname}/public", {maxAge=0}]
+
+  }
+
+  -- This one will require npm install --save packages/@quenk/tendril-morgan
+  log = {
+
+    provider = @quenk/tendril-morgan#log
+    
+    options = [${HTTP_LOG_FORMAT}]
+
+  }
+
+  json = {
+
+    provider = body-parser#json 
+
+  }
+
+  urlencoded = {
+
+    provider = body-parser#urlencoded 
+
+  }
+
+}
+
+-- Actually enable the middleware in this order.
+app.middleware.enabled = ["log", "public", "json", "urlencoded"]
