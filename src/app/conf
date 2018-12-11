@@ -31,7 +31,7 @@ app.middleware.available = {
 
     provider = @quenk/tendril-morgan#log
     
-    options = [${HTTP_LOG_FORMAT}]
+    options = [${MORGAN_LOG_FORMAT}]
 
   }
 
