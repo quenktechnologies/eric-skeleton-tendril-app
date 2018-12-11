@@ -15,6 +15,8 @@ server.host = "0.0.0.0"
 
 -- Default middleware configuration.
 -- Remember that middleware must be declared available before actual use.
+-- The "log" middleware will require npm install --save packages/@quenk/tendril-morgan
+-- before yse.
 app.middleware.available = {
 
   public = {
@@ -25,7 +27,6 @@ app.middleware.available = {
 
   }
 
-  -- This one will require npm install --save packages/@quenk/tendril-morgan
   log = {
 
     provider = @quenk/tendril-morgan#log
