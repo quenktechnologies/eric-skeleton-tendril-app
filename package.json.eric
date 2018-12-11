@@ -11,7 +11,7 @@
     "license": "{{{project.license.name}}}",
     "dependencies": {
         "@quenk/preconditions": "^4.2.0",
-        "@quenk/tendril": "^0.18.0",
+        "@quenk/tendril": "^0.18.1",
         "@quenk/noni": "^1.8.5",
         "body-parser": "^1.17.2",
         "dotenv": "^6.2.0",
