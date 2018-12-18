@@ -7,6 +7,7 @@
 
 ### Current location. ###
 HERE=$(shell pwd)
+SHELL=/bin/bash -o pipefail
 
 ### Binaries. ###
 TDC?=$(HERE)/node_modules/.bin/tdc
