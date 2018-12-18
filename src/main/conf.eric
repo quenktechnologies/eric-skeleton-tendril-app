@@ -51,3 +51,9 @@ app.middleware.available = {
 
 -- Actually enable the middleware in this order.
 app.middleware.enabled = ["log", "public", "json", "urlencoded"]
+
+-- Invoke the connected hook.
+app.on.connected = ../events#connected
+
+-- Invoke the start hook.
+app.on.start = ../events#start
