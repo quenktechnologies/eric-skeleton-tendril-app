@@ -1,6 +1,7 @@
 import { Future, pure } from '@quenk/noni/lib/control/monad/future';
-import { ok } from '@quenk/tendril/lib/app/api/http';
-import { Request, ActionM } from '@quenk/tendril/lib/app/api';
+import { ok } from '@quenk/tendril/lib/app/api/action/http/response';
+import { ActionM } from '@quenk/tendril/lib/app/api/action';
+import { Request  } from '@quenk/tendril/lib/app/api/request';
 
 /**
  * index sends a 200 status with example body text.
