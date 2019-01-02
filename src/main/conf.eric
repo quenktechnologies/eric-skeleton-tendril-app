@@ -56,4 +56,4 @@ app.middleware.enabled = ["log", "public", "json", "urlencoded"]
 app.on.connected = ../app/events#connected
 
 -- Invoke the start hook.
-app.on.start = ../app/events#start
+app.on.start = ../app/events#started
