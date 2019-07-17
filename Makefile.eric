@@ -32,7 +32,8 @@ PROJECT_SRC_DIR:=$(HERE)/src
 PROJECT_SRC_DIR_FILES:=$(shell $(FIND) $(PROJECT_SRC_DIR) -type f)
 PROJECT_PACKAGES_DIR:=$(HERE)/packages
 PROJECT_BUILD_DIR:=$(HERE)/{{{project.build.directory}}}
-$(PROJECT_BUILD_MAIN_DIR):=$(PROJECT_BUILD_DIR)/main
+PROJECT_BUILD_MAIN_DIR:=$(PROJECT_BUILD_DIR)/main
+
 # Configure the paths for your extra packages here.
 TENDRIL_MORGAN_BUILD:=$(PROJECT_PACKAGES_DIR)/tendril-morgan/lib
 
