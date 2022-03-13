@@ -1,0 +1,66 @@
+
+-- [Actor Configuration] --
+
+-- The id and mount point for this module.
+-- Change if you want routes to be served relative to another directory.
+id = "/"
+
+-- [Server Configuration] --
+
+-- Read the port number from the environment
+server.port = ${PORT}
+
+-- Bind to the loopback. You can change this if you like.
+server.host = "0.0.0.0"
+
+-- Uses MongoDB for the main connection.
+connections.main.connector = @quenk/tendril-connection-mongodb#connector
+
+-- Configuration for the main connection.
+connections.main.options = [${MONGO_URL}, {useNewUrlParser = true}]
+
+-- Enable cookie based user sessions.
+app.session.enable = true
+
+-- Get the secret for session cookie signing from the environment.
+app.session.options.secret = ${SESSION_SECRET}
+      
+-- The name to use for the session cookies. Change this to something app specific.
+app.session.options.name = "tendril"
+
+-- Configures the session to use a MongoDB database for data storage.
+app.session.store.provider = @quenk/tendril-session-mongodb#provider
+
+-- Get the URL from the environment.
+app.session.store.options.uri = ${MONGO_URL}
+
+-- Requires a valid CSRF token to be sent with each write request.
+app.csrf.token.enable = true
+
+-- Enables the sending of the CSRF token via cookie for XHR applications.
+app.csrf.token.send_cookie = true
+
+-- Enables logging of HTTP requests.
+app.log.enable = true
+
+-- Reads the log format from the environment.
+app.log.format = ${LOG_FORMAT}
+
+-- Enables parsing request bodies as JSON.
+app.parsers.body.json.enable = true
+
+-- Configures which directories should be served as public, static assests.
+app.dirs.public = [ "public" ]
+
+-- Include any additional ExpressJS middleware you want configured here.
+app.middleware.available = {}
+
+-- Specify key names from app.middleware.available here to install them to the
+-- ExpressJS sub-system.
+app.middleware.enabled = []
+
+-- Invoke the connected hook.
+app.on.connected = ./events#connected
+
+-- Invoke the started hook.
+app.on.started = ./events#started

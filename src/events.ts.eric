@@ -11,4 +11,3 @@ export const connected = () : Future<void> =>
  */
 export const started = () : Future<void> => 
   pure(console.info('{{{project.name}}}: running'));
-

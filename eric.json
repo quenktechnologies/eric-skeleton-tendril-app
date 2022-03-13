@@ -10,6 +10,11 @@
             "prompt": "What is this project called?"
 
         },
+        "project.varname": {
+           "type": "string",
+           "prompt": "Specify a variable prefix to use in Makefiles"
+        
+        },
         "project.description": {
 
             "type": "string",

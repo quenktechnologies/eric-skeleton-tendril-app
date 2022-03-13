@@ -1,6 +1,6 @@
 {
 
-    "name": "@quenk/tendril-morgan",
+    "name": "{{project.org}}/frontend",
     "private": "true",
     "version": "0.0.1",
     "main": "lib/index.js"
